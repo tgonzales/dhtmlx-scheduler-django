@@ -1,0 +1,13 @@
+<data>
+{% for event in eventList %}
+   	<event id="{{event.id}}">
+		<start_date>{{event.start_date|date:"Y-m-d H:i"|escape}}</start_date>
+		<end_date>{{event.end_date|date:"Y-m-d H:i"|escape}}</end_date>
+		<text><![CDATA[{{event.text|escape}}]]></text>
+		<details><![CDATA[{{event.details|escape}}]]></details>
+	</event>
+{% empty %}
+
+{% endfor %}
+</data>
+

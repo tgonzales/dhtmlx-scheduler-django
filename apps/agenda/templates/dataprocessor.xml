@@ -1,0 +1,9 @@
+<data>
+
+{% for response in responseList %}
+   <action type="{{response.type}}" sid="{{response.sid}}" tid="{{response.tid}}" />
+{% empty %}
+
+{% endfor %}
+
+</data>
